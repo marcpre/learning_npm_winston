@@ -1,6 +1,5 @@
 const path = require('path')
 const winston = require('winston')
-//const moment = require('moment')
 
 module.exports = () => {
   process.on('uncaughtException', err => winston.error('uncaught exception: ', err))
