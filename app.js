@@ -1,11 +1,9 @@
 const express = require('express')
-const winston = require("./src/t02-loggingToFolder")
+const logger = require("./src/t02-winstonWithColors")
 const app = express()
 
-//initialize winston
-app.use(winston)
-
 app.get('/', function (req, res) {
+  logger.info("Test Message")
   res.send('Hello World!')
 })
 
